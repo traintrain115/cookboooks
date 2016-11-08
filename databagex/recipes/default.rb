@@ -8,7 +8,7 @@
 #
 
 
-data=data_bag_item( 'databagex', 'samp.json')
+data=data_bag_item( 'databagex', 'samp')
 template '/tmp/templatefile' do
   source 'samp.erb'
   variables( :tempVar => data['tempVar']  )
