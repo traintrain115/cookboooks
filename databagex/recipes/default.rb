@@ -8,16 +8,8 @@
 #
 
 
-cookbook_file '/tmp/test.txt' do
-  source 'test.txt'
-  owner 'ec2-user'
-  group 'ec2-user'
-  mode '0755'
-  action :create
-end
-
-data=data_bag_item( 'samp.json', 'staging')
+data=data_bag_item( 'databagex', 'samp.json')
 template '/tmp/templatefile' do
   source 'samp.erb'
-  variables( :tempVar => data['staging']['tempVar']  )
+  variables( :tempVar => data['tempVar']  )
 end
