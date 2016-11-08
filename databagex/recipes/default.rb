@@ -9,7 +9,7 @@
 
 
 data=data_bag_item( 'databagex', 'samp')
-template '/tmp/templatefile' do
+template '/tmp/databagex' do
   source 'samp.erb'
   variables( :tempVar => data['tempVar']  )
 end

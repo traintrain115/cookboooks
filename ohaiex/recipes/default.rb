@@ -9,7 +9,7 @@
 
 
 data=node['cpu']['total']
-template '/tmp/templatefile' do
+template '/tmp/ohaiexample' do
   source 'samp.erb'
   variables( :tempVar => data  )
 end
