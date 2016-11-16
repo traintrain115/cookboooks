@@ -9,13 +9,3 @@ template "#{plugin_path}/myproduct_ohai_vars.rb" do
   action :create
   notifies :reload, "ohai[reload]", :immediately
 end
-
-
-package 'install httpd' do
-
-  package_name 'httpd'
-end
-
-service 'httpd' do
-  action [:enable, :start]
-end
